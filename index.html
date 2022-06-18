@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="D:\ads project\template\index.css">
+        <title>GYM_APPLICATION</title>
+        
+
+
+    <!-- close style -->
+    <style>
+    .outer {
+        background: rgb(235, 233, 233,.9);
+        height: 60px;
+        display: block;
+    }
+
+    .button {
+        position: absolute;
+        top: 1rem ;right:2rem;
+        
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    
+    
+    </style>
+    <!-- end -->
+
+
+
+    </head>
+    <body>
+        <header>
+            <nav>
+            <div class="logo">
+                <span id="Blue">SFC</span>Gym
+            </div>
+
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="bmi.html" >BMI</a>
+                <a href="#">Services</a>
+                <a href="#" id="exc" >Exercise</a>
+                <a href="#contact" >Contact</a>
+
+            </div>
+
+
+
+
+
+            
+            <div class="icon">
+                <img src="data:image/png;base64,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" >
+            </div>
+            <div class="">
+                <a href="profile.html"><img src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt="Avatar" class="avatar">
+                </a>
+                </div>
+        </nav>
+        <div class="container">
+            <div class="left">
+                <h1>SSN Fitness Center</h1><br>
+                    <p class="para">Its not an usual gym app,
+                       We wont suggest any workouts for reducing weights,
+                       Instead we recomend you to do some basic physical activities
+                       like walking,cycling,joging,etc.</p><br>
+                    <button class="btn" onclick="window.location.href='bmi.html'">Check your BMI</button>
+                    </div>
+            <div class="right">
+                <img src="https://t3.ftcdn.net/jpg/02/56/17/92/360_F_256179223_FDWWNhqs8afJPs2W0iUUptiFXte4K8gP.jpg">
+            </div>
+        </div>
+        
+    </header>
+
+    <section>
+        <div class="about">
+            <div class="about-row">
+                <div class="about-left-col">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCUAdFE3Oy4e0FcwGnGE2fP_hWGadiLuYL2w&usqp=CAU ">
+                </div>
+                <div class="about-right-col">
+                    <h1 id="s">About us</h1>
+                    <br>
+                    <p id="p-title"><span id="ssn">SSN First Gym App</span></p>
+                    <br>
+                    <p>The SSN students whon are not intrested in doing heavy workouts can join as a member in this 
+                        website and gain several advantages by not doing any hardcore exercise.
+                        We suggest the users to do simple cycling, walking, jogging for a certain time limit.Also based on the BMI(body mass weight) we  suggest food that they need to follow.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="section3">
+        <div class="sign">
+            <div class="sign-row">
+                <div class="sign-left-col">
+                    <h1 id="ssn">Sign Up To Become </h1>
+                    <br>
+                    <h2>BODY BUILDER</h2>
+                    <br>
+                    <!-- signup button -->
+                    <button type="button" class="btn" onclick="signin_page()">Sign Up</button>    
+                </div>
+                <div class="sign-right-col">
+                   <h1 id="ssn">Supported by</h1>
+                   <img src="https://t4.ftcdn.net/jpg/04/49/98/51/360_F_449985117_jZMiA4BWdlDxQ2QhAqHZt3PzYTMctOn5.jpg" alt="">
+                   <a name="contact"></a> 
+                   <h2>Contact us</h2>
+                    <h2 style="color: rgba(255, 255, 255, 0.722);">8939632008</h2>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+    <!-- signup page -->
+    <div class=sign_form_container id="GFG">
+        
+        <form action="" >
+            <h1>Sign in page</h1>
+            <span>Username</span>
+            <input type="email" class="box" name="" placeholder="Email" >
+            <span>password</span>
+            <input type="password" name="" class="box" placeholder="password">
+            <input type="button" value="Sign_in" onclick="ff()" class="bttn">
+            <br>
+            <p>Dont have an account</p>
+            <br><a href="newaccount.html">Click me</a>
+            
+        </form>
+        <!-- close button -->
+        
+
+        <div class="outer">
+            <div class="button">X</div>
+        </div>
+        <br>
+        
+        </div>    
+   
+        <script>
+            
+            //close up sign in page
+            var el = document.querySelector('.button');
+            el.addEventListener('click', function () {
+                var el3 = document.querySelector('.sign_form_container');
+                el3.style.right = "-105%";
+            });
+
+            //open up sign in page
+            function signin_page(){
+                var s=document.querySelector('.sign_form_container');
+                s.style.right="0%";
+            }
+             
+            function ff(){
+                window.location.href="profile.html"
+            }
+            // BMi
+            
+            
+        </script>
+
+    
+    <!-- end close button-->
+    </div> 
+</body> 
+</html>

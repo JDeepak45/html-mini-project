@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>profile page</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="D:\ads project\template\profile.css">
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script> -->
+    </head>
+    <body> 
+<!-- side nav -->
+        <header-component></header-component>
+        <!-- profile -->
+        <section id="cc">
+        <div  class="card">
+            <img src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt="Avatar" class="avatar">
+             <br><h1>Username</h1>
+            <p >BMI at Start</p> <br>
+            <input type="text" id="old">
+            <p>Current BMI</p>
+            <input type="text" id="new"><br><br>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            
+            </div>
+
+        </section>
+
+
+
+<!-- diet -->
+        <section id="de" style="display: none;">
+       <div class="diet">
+           <!-- <h1>Diet Plan</h1> -->
+            <br>
+            <div class="left">            
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/2/2a/Living_on_the_Veg.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1 style="background-color: rgb(91, 201, 183);">
+                            Vegetarian
+                        </h1>  
+                        <p>We love veg foods</p>
+                        <button id="bb" onclick="diet_chart()"> I am Veg </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="right">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyKxQ3OeoAWDutdrGXA9xVZwYTPXCuWI5ncw&usqp=CAU" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1 style="background-color: rgb(91, 201, 183);">Non-Vegetarian</h1> 
+                        <p>We love Non-veg foods</p>
+                        <button id="bb" onclick="diet_chart()">I am Non-Veg</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
+  
+
+        </div>
+    </section>
+
+
+    <!-- btton-->
+   
+
+
+    <section id="food-chart" style="display: none;">
+
+        <div id="bts">
+            <h1 style="text-align: center;font-size: 2rem;margin-top: 2rem;color: aliceblue;">Diet PLan</h1>
+            <br>
+        </div>
+    
+        <div class="btn-group" style="width: 100%;">
+            <button style="width: 9%;"> Day 1</button><button style="width: 9%;"> Day 2</button><button style="width:9%;"> Day 3</button><button style="width: 9%;"> Day 4</button><button style="width: 9%;"> Day 5</button><button style="width: 9%;"> Day 6</button><button style="width: 9%;"> Day 7</button>
+            </div>
+        <div class="btn-group" style="width: 100%;">
+            <button style="width: 9%;"> Day 8</button><button style="width: 9%;"> Day 9</button><button style="width:9%;"> Day 10</button><button style="width: 9%;"> Day 11</button><button style="width: 9%;"> Day 12</button><button style="width: 9%;"> Day 13</button><button style="width: 9%;"> Day 14</button>
+            </div>
+        <div class="btn-group" style="width: 100%;">
+            <button style="width: 9%;"> Day 15</button><button style="width: 9%;"> Day 16</button><button style="width:9%;"> Day 17</button><button style="width:9%;"> Day 18</button><button style="width: 9%;"> Day 19</button><button style="width: 9%;"> Day 20</button><button style="width: 9%;"> Day 21</button>
+            </div>
+        <div class="btn-group" style="width: 100%;">
+            <button style="width: 9%;"> Day 22</button><button style="width: 9%;"> Day 24</button><button style="width:9%;"> Day 24</button><button style="width: 9%;"> Day 25</button><button style="width: 9%;"> Day 26</button><button style="width: 9%;"> Day 27</button><button style="width: 9%;"> Day 28</button>
+            </div>
+        <div class="btn-group" style="width: 100%;margin-left: 30rem;">
+            <button style="width: 10%;"> Day 29</button><button style="width: 10%;"> Day 30</button>
+        </div>
+               
+        
+        <table>
+            <tr>
+              <th></th>
+              <th>Breakfast</th>
+              <th>Lunch</th>
+              <th>Dinner</th>
+            </tr>
+            <tr>
+              <td>Food</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Calories</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Grams</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+    </section>
+
+
+    <!-- cycling -->
+    <section id="cycling" style="display:none;margin-top: 2rem">
+
+
+        <div class="main" style="width:100%;justify-content: center;text-align: center;">
+            <h1>15 Days routine</h1>
+            <p>Each day any one of the Exercise can be followed </p>
+        </div> 
+      <!--  --><br>
+      <div class="container-cont">
+      <div class="left-left">
+        <div style="text-align: center;";><h1>Jogging</h1></div>
+        <div class="btn-group" >
+            <button style="width: 15%;"> Day 1</button><button style="width: 15%;"> Day 2</button><button style="width:15%;"> Day 3</button>
+            </div>
+        <div class="btn-group" >
+            <button style="width: 15%;"> Day 4</button><button style="width: 15%;"> Day 5</button><button style="width:15%;"> Day 5</button>
+            </div>
+        <div class="btn-group">
+            <button style="width: 15%;"> Day 7</button><button style="width: 15%;"> Day 8</button><button style="width:15%;"> Day 9</button>
+            </div>
+        <div class="btn-group" >
+            <button style="width: 15%;"> Day 10</button><button style="width: 15%;"> Day 11</button><button style="width:15%;"> Day 12</button>
+            </div>
+        <div class="btn-group" style="margin-left: 5rem;">
+            <button style="width: 15%;"> Day 13</button><button style="width: 15%;"> Day 15</button>
+        </div></div>
+        <!--  --><br>
+        <div class="right-right">
+        <div style="text-align: center;";><h1>Cycling</h1></div>
+        <div class="btn-group" style="width: 100%;">
+            <button style="width: 15%;"> Day 1</button><button style="width: 15%;"> Day 2</button><button style="width:15%;"> Day 3</button>
+            </div>
+        <div class="btn-group" >
+            <button style="width: 15%;"> Day 4</button><button style="width: 15%;"> Day 5</button><button style="width:15%;"> Day 5</button>
+            </div>
+        <div class="btn-group" >
+            <button style="width: 15%;"> Day 7</button><button style="width: 15%;"> Day 8</button><button style="width:15%;"> Day 9</button>
+            </div>
+        <div class="btn-group" >
+            <button style="width: 15%;"> Day 10</button><button style="width: 15%;"> Day 11</button><button style="width:15%;"> Day 12</button>
+            </div>
+        <div class="btn-group" style="margin-left: 5rem;">
+            <button style="width: 15%;"> Day 13</button><button style="width: 15%;"> Day 15</button>
+        </div></div></div>
+    </section>
+</body>
+
+    
+    <!-- Js script -->
+        <script>
+        const headerTemplate = document.createElement('template');
+        headerTemplate.innerHTML = `
+
+        <style>
+            #mySidenav a {
+            position: absolute; 
+            left: -80px; 
+            transition: 0.3s; 
+            padding: 15px; 
+            width: 100px; 
+            text-decoration: none; 
+            font-size: 20px; 
+            color: white; 
+            border-radius: 0 5px 5px 0; 
+        }
+        
+        #mySidenav a:hover {
+            left: 0; 
+        }
+        
+        #dp {
+            top: 20px;
+            background-color: #04AA6D;
+        }
+        
+        #cycle {
+            top: 80px;
+            background-color: #2196F3; 
+        }
+        
+        #diet {
+            top: 140px;
+            background-color: #cc0000 ;
+        }
+        #homie{
+            top:200px;
+            background-color: #ff9933 ;
+        }
+        </style>
+
+        <div id="mySidenav" class="sidenav">
+           
+           <a href="#cc" onclick="ccc()" id="dp">Profile</a>         
+           <a href="#de" onclick="ddd()" id="diet">Diet</a>
+           <a href="#"   onclick="cyc()" id="cycle">Exercise</a>
+           <a href="#"   onclick="home()" id="homie">Sign out</a>
+         </div>
+       `
+
+        class Header extends HTMLElement {
+            constructor() {
+                // Always call super first in constructor
+                super();
+            }
+
+            connectedCallback() {
+                const shadowRoot = this.attachShadow({ mode: 'open' });
+                shadowRoot.appendChild(headerTemplate.content);
+            }
+        }
+
+        customElements.define('header-component', Header);
+    
+    // days
+    
+        function home(){
+            
+            window.location.href = "index.html";
+        }
+
+        // 
+        function ddd()
+        {
+            var el=document.getElementById("cc");
+            el.style.display="none";
+            
+            var el1=document.getElementById("de");
+            el1.style.display="block";
+        
+            var el2=document.getElementById("food-chart");
+            el2.style.display="none";
+
+            var el3=document.getElementById("cycling");
+            el3.style.display="none";
+            
+        }
+        
+        function ccc()
+        {
+            var el=document.getElementById("de");
+            el.style.display="none";
+            
+            var el1=document.getElementById("cc");
+            el1.style.display="block";
+            
+            var el2=document.getElementById("food-chart");
+            el2.style.display="none";
+
+            var el3=document.getElementById("cycling");
+            el3.style.display="none";
+        }
+
+        function diet_chart(){
+            
+            var el=document.getElementById("de");
+            el.style.display="none";
+            
+            var el1=document.getElementById("food-chart");
+            el1.style.display="block";
+            var el3=document.getElementById("cycling");
+            el3.style.display="none";
+        }
+
+         function cyc(){
+            
+            var el=document.getElementById("de");
+            el.style.display="none";
+            
+            var el1=document.getElementById("food-chart");
+            el1.style.display="none";
+    
+            var el2=document.getElementById("cc");
+            el2.style.display="none";
+            
+            var el3=document.getElementById("cycling");
+            el3.style.display="block";
+        }
+        
+        
+
+    </script>
+</html>
